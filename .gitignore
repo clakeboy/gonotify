@@ -18,3 +18,4 @@
 go.sum
 gonotify
 asset/asset.go
+db

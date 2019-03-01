@@ -77,6 +77,10 @@ func (n *NotifyServer) execNotify(item *task.Item) bool {
 		return false
 	}
 
+	if taskData.Once {
+		taskData.IsExecute = true
+	}
+
 	httpClient := utils.NewHttpClient()
 	httpClient.SetTimeout(time.Second * 5)
 	var res []byte
